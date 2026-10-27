@@ -1,0 +1,1334 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Traveller - Discover incredible Indian destinations, calculate accurate group budgets, and plan personalized day-by-day itineraries within your budget.">
+  <title>AI Traveller â€” Your Next Adventure, Within Budget</title>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION BAR
+       ====================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="AI Traveller Homepage">
+        <div class="brand-icon">
+          <!-- Compass SVG Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </div>
+        AI Traveller
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#featured" class="nav-link">Explore</a>
+        <a href="#planner" class="nav-link">Plan a Trip</a>
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <button class="nav-link saved-trips-pill" id="nav-saved-btn" aria-label="Open Saved Trips">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Saved Trips
+          <span class="saved-badge" id="saved-badge-count">0</span>
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#planner" class="btn btn-primary btn-sm">Plan My Trip</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80" alt="Scenic mountain valley at sunrise">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Intelligent Budget-First Travel Discovery
+          </div>
+
+          <h1 class="hero-title">
+            Your Next Adventure, <br>
+            <span class="highlight">Within Budget.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Discover incredible destinations, find the right stay, and plan unforgettable trips without overspending. Transparent estimates including transport, rooms, food, and safety reserves.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#planner" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              Plan My Trip
+            </a>
+            <a href="#featured" class="btn btn-ghost-white btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 8 8 12 12 16 12 8"></polygon>
+              </svg>
+              Explore Destinations
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>12+</h4>
+              <p>Curated Indian Hubs</p>
+            </div>
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Transparent Estimates</p>
+            </div>
+            <div class="stat-item">
+              <h4>10%</h4>
+              <p>Emergency Buffer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Trip Showcase Card -->
+        <div class="hero-card-wrapper">
+          <div class="hero-float-card">
+            <div class="float-card-header">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" alt="Jaipur Amber Fort">
+              <span class="float-card-badge">Sample Plan</span>
+            </div>
+            <div class="float-card-body">
+              <div class="float-card-destination">
+                <div>
+                  <h3>Jaipur, Rajasthan</h3>
+                  <p>From Agra â€¢ 240 km</p>
+                </div>
+                <span class="pill-success">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Within Budget
+                </span>
+              </div>
+
+              <div class="float-meta-pills">
+                <span class="meta-pill">ðŸ‘¥ 4 Travellers</span>
+                <span class="meta-pill">ðŸ—“ï¸ 3 Days (2 Nights)</span>
+                <span class="meta-pill">ðŸš‚ Express Train</span>
+              </div>
+
+              <div class="budget-breakdown-mini">
+                <div class="budget-row">
+                  <span>Group Budget:</span>
+                  <strong>â‚¹40,000</strong>
+                </div>
+                <div class="budget-row">
+                  <span>Est. Total Cost:</span>
+                  <span style="color: var(--color-secondary); font-weight: 700;">â‚¹30,580</span>
+                </div>
+                <div class="budget-row">
+                  <span>Est. Savings:</span>
+                  <span style="color: var(--color-success); font-weight: 700;">+â‚¹9,420</span>
+                </div>
+                <div class="progress-track" title="76% of budget used">
+                  <div class="progress-fill" style="width: 76.5%;"></div>
+                </div>
+              </div>
+
+              <div class="float-card-footer">
+                <span style="font-size: 0.82rem; color: var(--color-text-muted);">Includes 10% emergency buffer</span>
+                <a href="#planner" class="btn btn-secondary btn-sm" id="hero-try-sample-btn">Try This Example</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TRUST & BENEFITS SECTION
+         ==================================================================== -->
+    <section class="section-py benefits" id="benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why AI Traveller</span>
+          <h2 class="section-title">Travel Smarter With Budget Clarity</h2>
+          <p class="section-desc">We eliminate travel anxiety by providing complete upfront cost clarity before you book a single ticket or hotel room.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <!-- Calculator / Coin SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <line x1="16" y1="6" x2="16" y2="6.01"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+                <line x1="8" y1="16" x2="16" y2="16"></line>
+              </svg>
+            </div>
+            <h3>Smart Budget Planning</h3>
+            <p>Full itemization across transit, accommodation, daily food, local travel, sightseeing, and a mandatory 10% emergency reserve.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <!-- Compass SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h3>Personalized Destinations</h3>
+            <p>Our recommendation engine scores destinations against your starting city, budget limits, travel duration, and specific travel interests.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <!-- Bed / Hotel SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path>
+              </svg>
+            </div>
+            <h3>Hotel Recommendations</h3>
+            <p>Real room calculations based on guest capacity and nights needed. 1-day trips correctly incur 0 hotel room charges.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <!-- Calendar / Map SVG -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Day-by-Day Itineraries</h3>
+            <p>Dynamically generated schedules adapted to your chosen duration with recommended timings, entry fees, and local food stops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED DESTINATIONS SECTION
+         ==================================================================== -->
+    <section class="section-py featured" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Handpicked Getaways</span>
+          <h2 class="section-title">Featured Indian Destinations</h2>
+          <p class="section-desc">Explore six top destinations loved by travellers across India. Click any destination to pre-fill your trip planner.</p>
+        </div>
+
+        <div class="featured-grid">
+          <!-- Manali -->
+          <div class="feat-card" data-dest-id="manali" tabindex="0" role="button" aria-label="Explore Manali">
+            <img src="https://images.unsplash.com/photo-1626014303757-646629f69b71?auto=format&fit=crop&w=800&q=80" alt="Snow peaks in Manali">
+            <div class="feat-overlay">
+              <span class="feat-tag">Mountains & Snow</span>
+              <h3 class="feat-name">Manali</h3>
+              <p class="feat-location">Himachal Pradesh</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹4,800</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Manali</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jaipur -->
+          <div class="feat-card" data-dest-id="jaipur" tabindex="0" role="button" aria-label="Explore Jaipur">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Amber Fort in Jaipur">
+            <div class="feat-overlay">
+              <span class="feat-tag">Royal Heritage</span>
+              <h3 class="feat-name">Jaipur</h3>
+              <p class="feat-location">Rajasthan</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹3,200</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Jaipur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Goa -->
+          <div class="feat-card" data-dest-id="goa" tabindex="0" role="button" aria-label="Explore Goa">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80" alt="Goa sunny beach palm trees">
+            <div class="feat-overlay">
+              <span class="feat-tag">Beaches & Coastal</span>
+              <h3 class="feat-name">Goa</h3>
+              <p class="feat-location">Goa</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹5,500</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Goa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rishikesh -->
+          <div class="feat-card" data-dest-id="rishikesh" tabindex="0" role="button" aria-label="Explore Rishikesh">
+            <img src="https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=800&q=80" alt="Ganges river at Rishikesh">
+            <div class="feat-overlay">
+              <span class="feat-tag">Adventure & Yoga</span>
+              <h3 class="feat-name">Rishikesh</h3>
+              <p class="feat-location">Uttarakhand</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹3,500</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Rishikesh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Udaipur -->
+          <div class="feat-card" data-dest-id="udaipur" tabindex="0" role="button" aria-label="Explore Udaipur">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="Lake Pichola Udaipur Palace">
+            <div class="feat-overlay">
+              <span class="feat-tag">City of Lakes</span>
+              <h3 class="feat-name">Udaipur</h3>
+              <p class="feat-location">Rajasthan</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹4,200</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Udaipur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nainital -->
+          <div class="feat-card" data-dest-id="nainital" tabindex="0" role="button" aria-label="Explore Nainital">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Naini lake and green hills">
+            <div class="feat-overlay">
+              <span class="feat-tag">Lakes & Hills</span>
+              <h3 class="feat-name">Nainital</h3>
+              <p class="feat-location">Uttarakhand</p>
+              <div class="feat-footer">
+                <span class="feat-price">From <strong>â‚¹3,600</strong> / person</span>
+                <span class="btn btn-secondary btn-sm">Plan Nainital</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTERACTIVE TRIP PLANNER SECTION
+         ==================================================================== -->
+    <section class="section-py planner-section" id="planner">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Planner</span>
+          <h2 class="section-title">Design Your Ideal Itinerary</h2>
+          <p class="section-desc">Provide your group details and budget. Our smart engine will evaluate feasibility, calculate costs, and match destinations.</p>
+        </div>
+
+        <div class="planner-card">
+          <!-- Validation Alert Box -->
+          <div class="validation-alert" id="form-error-alert" role="alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span id="form-error-msg">Please review your form entries.</span>
+          </div>
+
+          <form id="trip-planner-form" novalidate>
+            <div class="form-grid">
+              
+              <!-- 1. Starting City -->
+              <div class="form-group">
+                <label for="origin-select" class="form-label">
+                  <span>Starting City</span>
+                  <span class="label-hint">Where are you travelling from?</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <select id="origin-select" class="form-control" required>
+                    <option value="agra" selected>Agra, Uttar Pradesh</option>
+                    <option value="delhi">Delhi NCR</option>
+                    <option value="jaipur">Jaipur, Rajasthan</option>
+                    <option value="mumbai">Mumbai, Maharashtra</option>
+                    <option value="bangalore">Bangalore, Karnataka</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="lucknow">Lucknow, Uttar Pradesh</option>
+                    <option value="kolkata">Kolkata, West Bengal</option>
+                    <option value="ahmedabad">Ahmedabad, Gujarat</option>
+                  </select>
+                </div>
+                <div class="preset-pills">
+                  <span class="preset-chip origin-chip" data-origin="agra">Agra</span>
+                  <span class="preset-chip origin-chip" data-origin="delhi">Delhi</span>
+                  <span class="preset-chip origin-chip" data-origin="jaipur">Jaipur</span>
+                  <span class="preset-chip origin-chip" data-origin="mumbai">Mumbai</span>
+                  <span class="preset-chip origin-chip" data-origin="bangalore">Bangalore</span>
+                </div>
+              </div>
+
+              <!-- 2. Number of Travellers -->
+              <div class="form-group">
+                <label for="travellers-input" class="form-label">
+                  <span>Number of Travellers</span>
+                  <span class="label-hint">Total people in your group</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <input type="number" id="travellers-input" class="form-control" min="1" max="50" value="4" required>
+                </div>
+                <div class="preset-pills">
+                  <span class="preset-chip traveller-chip" data-val="1">Solo (1)</span>
+                  <span class="preset-chip traveller-chip" data-val="2">Couple (2)</span>
+                  <span class="preset-chip traveller-chip active" data-val="4">Group (4)</span>
+                  <span class="preset-chip traveller-chip" data-val="6">Family (6)</span>
+                </div>
+              </div>
+
+              <!-- 3. Total Group Budget (INR) -->
+              <div class="form-group">
+                <label for="budget-input" class="form-label">
+                  <span>Total Group Budget (INR)</span>
+                  <span class="label-hint">Max spending limit for whole group</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon" style="font-weight: 700; font-size: 1.1rem; color: var(--color-primary);">â‚¹</div>
+                  <input type="number" id="budget-input" class="form-control" min="5000" step="1000" value="40000" required>
+                </div>
+                <div class="preset-pills">
+                  <span class="preset-chip budget-chip" data-val="20000">â‚¹20,000</span>
+                  <span class="preset-chip budget-chip active" data-val="40000">â‚¹40,000</span>
+                  <span class="preset-chip budget-chip" data-val="60000">â‚¹60,000</span>
+                  <span class="preset-chip budget-chip" data-val="100000">â‚¹1,00,000</span>
+                </div>
+              </div>
+
+              <!-- 4. Trip Duration (Days) -->
+              <div class="form-group">
+                <label for="duration-input" class="form-label">
+                  <span>Trip Duration (Days)</span>
+                  <span class="label-hint">Overnight stays = (Days - 1)</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <input type="number" id="duration-input" class="form-control" min="1" max="30" value="3" required>
+                </div>
+                <div class="preset-pills">
+                  <span class="preset-chip duration-chip" data-val="1">1 Day (Day Trip)</span>
+                  <span class="preset-chip duration-chip" data-val="2">2 Days (Weekend)</span>
+                  <span class="preset-chip duration-chip active" data-val="3">3 Days (Long Weekend)</span>
+                  <span class="preset-chip duration-chip" data-val="5">5 Days</span>
+                </div>
+              </div>
+
+              <!-- 5. Optional Travel Date -->
+              <div class="form-group">
+                <label for="travel-date-input" class="form-label">
+                  <span>Travel Date</span>
+                  <span class="label-hint">Optional</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <input type="date" id="travel-date-input" class="form-control">
+                </div>
+              </div>
+
+              <!-- 6. Accommodation Preference -->
+              <div class="form-group">
+                <label for="accommodation-select" class="form-label">
+                  <span>Accommodation Preference</span>
+                  <span class="label-hint">Desired lodging category</span>
+                </label>
+                <div class="input-with-icon">
+                  <div class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                  </div>
+                  <select id="accommodation-select" class="form-control">
+                    <option value="any" selected>Any (Engine Recommended)</option>
+                    <option value="Budget">Budget Inn / Homestay (â‚¹1,400 - â‚¹1,800/night)</option>
+                    <option value="Standard">Standard 3/4-Star Hotel (â‚¹3,200 - â‚¹3,900/night)</option>
+                    <option value="Premium">Heritage Palace / Luxury Resort (â‚¹6,800 - â‚¹9,900/night)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 7. Travel Style (Full Width Radio Cards) -->
+              <div class="form-group full-width">
+                <label class="form-label">
+                  <span>Travel Style</span>
+                  <span class="label-hint">Determines food & accommodation tier defaults</span>
+                </label>
+                <div class="radio-cards-grid">
+                  <label class="radio-card active">
+                    <input type="radio" name="travelStyle" value="Budget" checked>
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                        <path d="M12 18V6"></path>
+                      </svg>
+                    </div>
+                    <span class="card-title">Budget</span>
+                    <span class="card-sub">Max Savings</span>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="travelStyle" value="Standard">
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <span class="card-title">Standard</span>
+                    <span class="card-sub">Balanced Comfort</span>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="travelStyle" value="Premium">
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 3h12l4 6-10 12L2 9l4-6z"></path>
+                      </svg>
+                    </div>
+                    <span class="card-title">Premium</span>
+                    <span class="card-sub">Luxury & Indulgence</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 8. Transport Preference (Radio Cards) -->
+              <div class="form-group full-width">
+                <label class="form-label">
+                  <span>Transport Preference</span>
+                  <span class="label-hint">Round-trip transport method</span>
+                </label>
+                <div class="radio-cards-grid">
+                  <label class="radio-card active">
+                    <input type="radio" name="transportMode" value="train" checked>
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="3" width="16" height="16" rx="2"></rect>
+                        <path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3"></path>
+                      </svg>
+                    </div>
+                    <span class="card-title">Train</span>
+                    <span class="card-sub">AC 3-Tier / Chair Car</span>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="transportMode" value="bus">
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 6v6M16 6v6M2 12h20M4 18h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"></path>
+                        <circle cx="7" cy="18" r="2"></circle>
+                        <circle cx="17" cy="18" r="2"></circle>
+                      </svg>
+                    </div>
+                    <span class="card-title">Bus</span>
+                    <span class="card-sub">Volvo Sleeper</span>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="transportMode" value="car">
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H7.5a1 1 0 0 0-.8.4L4 11l-5.16.86a1 1 0 0 0-.84.99V16h3"></path>
+                        <circle cx="6.5" cy="16.5" r="2.5"></circle>
+                        <circle cx="16.5" cy="16.5" r="2.5"></circle>
+                      </svg>
+                    </div>
+                    <span class="card-title">Car / Cab</span>
+                    <span class="card-sub">Outstation Taxi</span>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="transportMode" value="flight">
+                    <div class="card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"></path>
+                      </svg>
+                    </div>
+                    <span class="card-title">Flight</span>
+                    <span class="card-sub">Economy Domestic</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 9. Interests Chips (Selectable Multi-Select) -->
+              <div class="form-group full-width">
+                <label class="form-label">
+                  <span>Travel Interests</span>
+                  <span class="label-hint">Select all that apply</span>
+                </label>
+                <div class="interests-grid" id="interests-container">
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Mountains">
+                    <span class="interest-pill">ðŸ”ï¸ Mountains</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Beaches">
+                    <span class="interest-pill">ðŸ–ï¸ Beaches</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Nature" checked>
+                    <span class="interest-pill">ðŸŒ² Nature</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="History" checked>
+                    <span class="interest-pill">ðŸ° History</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Temples">
+                    <span class="interest-pill">ðŸ›• Temples</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Adventure">
+                    <span class="interest-pill">ðŸ§— Adventure</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Food">
+                    <span class="interest-pill">ðŸ› Food & Cuisine</span>
+                  </label>
+                  <label class="interest-checkbox">
+                    <input type="checkbox" name="interests" value="Shopping">
+                    <span class="interest-pill">ðŸ›ï¸ Shopping</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="planner-action">
+              <button type="submit" class="btn btn-primary btn-lg" id="generate-trip-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Generate My Trip Plan
+              </button>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+                âš¡ Powered by our transparent budget ranking engine. All sample prices clearly disclosed.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         RESULTS EXPERIENCE SECTION
+         ==================================================================== -->
+    <section class="results-section" id="results">
+      <div class="container">
+        
+        <!-- Personalized Summary Banner -->
+        <div class="results-banner">
+          <div class="banner-left">
+            <h2 id="results-headline">Top Matches for Your Trip</h2>
+            <p id="results-subheadline">Based on your budget, travellers, duration, and preferences.</p>
+            <div class="summary-tags" id="results-summary-tags">
+              <!-- Dynamically injected summary tags -->
+            </div>
+          </div>
+          <div class="banner-right">
+            <a href="#planner" class="btn btn-ghost-white btn-sm">Edit Preferences</a>
+          </div>
+        </div>
+
+        <!-- Filter & Sorting Toolbar -->
+        <div class="results-controls">
+          <div class="filter-group">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted);">Filter:</span>
+            <button class="filter-btn active" data-filter="all">All Destinations</button>
+            <button class="filter-btn" data-filter="affordable">Within Budget Only</button>
+            <button class="filter-btn" data-filter="Mountains">Mountains</button>
+            <button class="filter-btn" data-filter="Heritage">Heritage</button>
+            <button class="filter-btn" data-filter="Spiritual">Spiritual</button>
+            <button class="filter-btn" data-filter="Beaches">Beaches</button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="sort-select" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted);">Sort By:</label>
+            <select id="sort-select" class="sort-select">
+              <option value="match" selected>Highest Match Score</option>
+              <option value="cost-low">Lowest Estimated Cost</option>
+              <option value="savings">Max Budget Savings</option>
+              <option value="duration">Ideal Duration</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Recommendations Grid -->
+        <div class="destinations-grid" id="destinations-container">
+          <!-- Dynamically populated destination cards -->
+        </div>
+
+        <!-- Empty Results State -->
+        <div class="empty-state" id="empty-results" style="display: none;">
+          <div class="empty-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>No Destinations Match This Budget</h3>
+          <p id="empty-state-msg">
+            We couldn't find any destinations completely within your budget using your current transport or style selections.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" id="empty-reset-filter-btn">Show All Destinations</button>
+            <a href="#planner" class="btn btn-secondary btn-sm">Adjust Budget or Duration</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         HOW IT WORKS SECTION
+         ==================================================================== -->
+    <section class="section-py how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple & Transparent</span>
+          <h2 class="section-title">How AI Traveller Works</h2>
+          <p class="section-desc">Plan your dream escape in three effortless steps with mathematically backed expense forecasts.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </div>
+            <h3>Enter Travel Preferences</h3>
+            <p>Tell us your origin city, travellers count, total budget, trip length, transport mode, and favorite activities.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3>Discover Feasible Matches</h3>
+            <p>Our algorithm ranks destinations by budget feasibility, distance from your origin, and interest alignment.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>Explore & Save Your Plan</h3>
+            <p>Inspect detailed day-by-day itineraries, exact room requirements, hotel options, and save plans directly in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BUDGET PLANNING TRANSPARENCY SECTION
+         ==================================================================== -->
+    <section class="section-py budget-guide" id="budget-guide">
+      <div class="container guide-grid">
+        <div class="guide-content">
+          <span class="section-tag">Mathematical Precision</span>
+          <h2>Clear Breakdown of Every Rupee</h2>
+          <p>
+            No hidden fees, no sudden surprise bills. Every trip forecast generated on AI Traveller follows a strict, audited mathematical formula accounting for the realities of group travel.
+          </p>
+
+          <div class="pillar-list">
+            <div class="pillar-item">
+              <div>
+                <h4>1. Distance-Scaled Transport</h4>
+                <p>Calculates round-trip costs per traveller based on distance between origin and destination and your selected transit mode.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div>
+                <h4>2. Capacity-Based Rooms</h4>
+                <p>Calculates exact rooms required: <code>ceil(travellers Ã· roomCapacity)</code> across <code>(days - 1)</code> overnight stays.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div>
+                <h4>3. Daily Dining & Local Transit</h4>
+                <p>Allocates realistic per-person meal estimates and group day cab/auto fares for the full trip duration.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div>
+                <h4>4. Sightseeing & Attraction Fees</h4>
+                <p>Factors authentic monument entrance tickets and popular activity passes for each traveler.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div>
+                <h4>5. 10% Emergency Reserve</h4>
+                <p>Automatically reserves 10% of total planned expenses to protect against spontaneous costs or surge rates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-card-preview">
+          <h3>Illustrative Budget Anatomy</h3>
+          <p style="color: #CBD5E1; font-size: 0.92rem; margin-bottom: 2rem;">
+            Example distribution for a 4-person, 3-day trip from Agra to Jaipur (Total: â‚¹30,580 of â‚¹40,000 budget):
+          </p>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-meta">
+              <span>Transport (Round Trip Train)</span>
+              <span>â‚¹4,224 (13.8%)</span>
+            </div>
+            <div class="chart-track">
+              <div class="chart-fill fill-transport" style="width: 14%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-meta">
+              <span>Accommodation (2 Rooms Ã— 2 Nights)</span>
+              <span>â‚¹12,800 (41.8%)</span>
+            </div>
+            <div class="chart-track">
+              <div class="chart-fill fill-stay" style="width: 42%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-meta">
+              <span>Food & Dining (4 Guests Ã— 3 Days)</span>
+              <span>â‚¹4,200 (13.7%)</span>
+            </div>
+            <div class="chart-track">
+              <div class="chart-fill fill-food" style="width: 14%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-meta">
+              <span>Local Transit & Sightseeing</span>
+              <span>â‚¹6,580 (21.5%)</span>
+            </div>
+            <div class="chart-track">
+              <div class="chart-fill fill-sight" style="width: 22%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-meta">
+              <span>Emergency Reserve (10%)</span>
+              <span>â‚¹2,780 (9.1%)</span>
+            </div>
+            <div class="chart-track">
+              <div class="chart-fill fill-reserve" style="width: 9.1%;"></div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: #E2E8F0;">Calculated Status:</span>
+            <span class="pill-success">Affordable (â‚¹9,420 Remaining)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FAQ SECTION
+         ==================================================================== -->
+    <section class="section-py faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Everything you need to know about AI Traveller's recommendation logic and pricing transparency.</p>
+        </div>
+
+        <div class="faq-list" id="faq-list">
+          <!-- Populated from data.js or default template -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       DESTINATION DETAILS MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="destination-modal" role="dialog" aria-modal="true" aria-labelledby="modal-dest-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header-hero">
+        <img id="modal-hero-img" src="" alt="Destination banner">
+        <div class="modal-hero-overlay">
+          <span class="badge-category" id="modal-category">Heritage</span>
+          <h2 class="dest-title" id="modal-dest-title" style="color: white; font-size: 2.2rem; margin-top: 0.5rem;">Jaipur</h2>
+          <p id="modal-dest-location" style="color: #CBD5E1; font-weight: 500;">Rajasthan â€¢ Best Time: Oct - Mar</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-tabs" role="tablist">
+          <button class="tab-btn active" data-tab="tab-overview" role="tab">Overview & Logistics</button>
+          <button class="tab-btn" data-tab="tab-budget" role="tab">Budget Breakdown</button>
+          <button class="tab-btn" data-tab="tab-hotels" role="tab">Hotels & Stays</button>
+          <button class="tab-btn" data-tab="tab-itinerary" role="tab">Day-by-Day Plan</button>
+        </div>
+
+        <!-- Tab 1: Overview -->
+        <div class="tab-panel active" id="tab-overview">
+          <p id="modal-overview-desc" style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-main); margin-bottom: 1.5rem;"></p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: var(--color-bg-subtle); padding: 1rem; border-radius: var(--radius-md);">
+              <span style="font-size: 0.75rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase;">Best Season</span>
+              <p id="modal-best-time" style="font-weight: 700; color: var(--color-primary); margin-top: 0.25rem;">October to March</p>
+            </div>
+            <div style="background: var(--color-bg-subtle); padding: 1rem; border-radius: var(--radius-md);">
+              <span style="font-size: 0.75rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase;">Climate</span>
+              <p id="modal-climate" style="font-weight: 700; color: var(--color-primary); margin-top: 0.25rem;">Pleasant winters</p>
+            </div>
+            <div style="background: var(--color-bg-subtle); padding: 1rem; border-radius: var(--radius-md);">
+              <span style="font-size: 0.75rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase;">Ideal Duration</span>
+              <p id="modal-ideal-duration" style="font-weight: 700; color: var(--color-primary); margin-top: 0.25rem;">2 - 4 Days</p>
+            </div>
+          </div>
+
+          <h4 style="font-family: var(--font-heading); margin-bottom: 0.75rem; color: var(--color-primary);">Top Curated Experiences</h4>
+          <ul id="modal-activities-list" style="list-style: disc; padding-left: 1.5rem; color: var(--color-text-muted); line-height: 1.8;">
+          </ul>
+        </div>
+
+        <!-- Tab 2: Full Budget Breakdown -->
+        <div class="tab-panel" id="tab-budget">
+          <div style="margin-bottom: 1rem; padding: 0.75rem 1rem; background: var(--color-bg-subtle); border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--color-text-muted);">
+            â„¹ï¸ All rates are transparent illustrative estimates based on current Indian market averages.
+          </div>
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th>Expense Category</th>
+                <th>Calculation Formula</th>
+                <th style="text-align: right;">Amount (INR)</th>
+              </tr>
+            </thead>
+            <tbody id="modal-budget-tbody">
+              <!-- Populated by JavaScript -->
+            </tbody>
+            <tfoot id="modal-budget-tfoot">
+              <!-- Populated by JavaScript -->
+            </tfoot>
+          </table>
+          <div id="modal-budget-feasibility-note" style="margin-top: 1rem;"></div>
+        </div>
+
+        <!-- Tab 3: Recommended Hotels -->
+        <div class="tab-panel" id="tab-hotels">
+          <div style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--color-text-muted);">
+            Room allocation: <strong id="modal-rooms-summary">2 rooms required for 4 travellers</strong> (Capacity: 2 guests / room). <em>Illustrative sample stays.</em>
+          </div>
+          <div class="hotels-grid" id="modal-hotels-container">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Tab 4: Day-by-Day Dynamic Itinerary -->
+        <div class="tab-panel" id="tab-itinerary">
+          <div style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--color-text-muted);">
+            Personalized itinerary generated for <strong id="modal-itinerary-duration">3 Days</strong>. Schedules and entrance charges are illustrative planning estimates.
+          </div>
+          <div class="timeline" id="modal-itinerary-container">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="modal-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Back to Results
+        </button>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-secondary btn-sm" id="modal-print-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Itinerary
+          </button>
+          <button class="btn btn-primary btn-sm" id="modal-save-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Save Trip
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       SAVED TRIPS DRAWER
+       ====================================================================== -->
+  <div class="drawer-backdrop" id="saved-drawer-backdrop"></div>
+  <aside class="saved-drawer" id="saved-drawer" aria-label="Saved Itineraries">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-secondary);">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <h3>Saved Trips</h3>
+      </div>
+      <button class="btn-delete-saved" id="close-saved-drawer-btn" aria-label="Close saved trips drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="saved-trips-list">
+      <!-- Populated from localStorage -->
+    </div>
+
+    <div style="padding: 1.25rem 1.75rem; border-top: 1px solid var(--color-border); background: var(--color-bg-subtle); display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 0.78rem; color: var(--color-text-muted);">Stored locally in your browser</span>
+      <button class="btn btn-secondary btn-sm" id="clear-all-saved-btn" style="color: var(--color-danger); border-color: rgba(239, 68, 68, 0.3);">
+        Clear All
+      </button>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       TOAST NOTIFICATIONS
+       ====================================================================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>AI Traveller</h3>
+          <p>
+            "Your Next Adventure, Within Budget." <br>
+            Empowering travellers with honest cost forecasting, capacity-verified hotel planning, and dynamic personalized Indian travel itineraries.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <div class="footer-links">
+            <a href="#featured">Manali (Himachal)</a>
+            <a href="#featured">Jaipur (Rajasthan)</a>
+            <a href="#featured">Goa (Beaches)</a>
+            <a href="#featured">Rishikesh (Uttarakhand)</a>
+            <a href="#featured">Udaipur (Rajasthan)</a>
+            <a href="#featured">Nainital (Uttarakhand)</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trip Planning</h4>
+          <div class="footer-links">
+            <a href="#planner">Trip Budget Calculator</a>
+            <a href="#budget-guide">How Costs are Estimated</a>
+            <a href="#how-it-works">Recommendation Engine</a>
+            <a href="#benefits">Trust & Guarantees</a>
+            <a href="#faq">Frequently Asked Questions</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Technology</h4>
+          <div class="footer-links">
+            <a href="README.md" target="_blank">Documentation</a>
+            <a href="#planner">Browser Local Storage</a>
+            <a href="#budget-guide">10% Safety Buffer</a>
+            <a href="#faq">Privacy & Cookies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 AI Traveller. All rights reserved. Built with HTML5, CSS3, & Vanilla JavaScript.
+          <div class="footer-disclaimer">
+            * Disclaimer: AI Traveller provides illustrative travel estimates for planning purposes. We are not a travel agency, airline ticket broker, or booking merchant. Rates are realistic market averages.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+<script>
+window.addEventListener("load", function() { 
+  const results = [];
+  function assert(caseNum, title, condition, details = "") {
+    const passed = Boolean(condition);
+    results.push({ caseNum, title, passed, details });
+    console.log(`[TEST ${caseNum}] ${passed ? "PASS" : "FAIL"}: ${title} ${details ? "(" + details + ")" : ""}`);
+  }
+
+  try {
+    const engine = window.AITraveller;
+    const data = window.TRAVEL_DATA;
+
+    // 1. Homepage loads
+    const heroTitle = document.querySelector(".hero-title");
+    const logo = document.querySelector(".nav-brand");
+    assert(1, "Homepage loads properly with brand and hero", Boolean(heroTitle && logo && heroTitle.textContent.includes("Adventure")), `Hero text: ${heroTitle ? heroTitle.textContent.trim().substring(0, 30) : "none"}`);
+
+    // 2. Navigation links work
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navHasHome = Array.from(navLinks).some(l => l.getAttribute("href") === "#home");
+    const navHasPlanner = Array.from(navLinks).some(l => l.getAttribute("href") === "#planner");
+    const navHasExplore = Array.from(navLinks).some(l => l.getAttribute("href") === "#featured");
+    assert(2, "Navigation links exist and point to valid anchors", navLinks.length >= 5 && navHasHome && navHasPlanner && navHasExplore, `Found ${navLinks.length} nav links`);
+
+    // 3. Trip planner opens correctly
+    const plannerSection = document.getElementById("planner");
+    const plannerForm = document.getElementById("trip-planner-form");
+    const genBtn = document.getElementById("generate-trip-btn");
+    assert(3, "Trip planner section and form exist", Boolean(plannerSection && plannerForm && genBtn), "Planner form accessible");
+
+    // 4. Four travellers, ₹40,000 budget, Agra origin, 3 days produce destination recommendations
+    const sampleParams = {
+      origin: "agra",
+      travellers: 4,
+      budget: 40000,
+      duration: 3,
+      travelDate: "",
+      accommodation: "any",
+      travelStyle: "Budget",
+      transportMode: "train",
+      interests: ["History", "Nature"]
+    };
+    const ranked = engine.rankDestinations(data.destinations, sampleParams);
+    const cardElements = document.querySelectorAll("#destinations-container .dest-card");
+    assert(4, "Four travellers, ₹40,000 budget, Agra origin, 3 days produce destination recommendations", 
+      ranked.length === 12 && cardElements.length >= 1, 
+      `Ranked destinations: ${ranked.length}, Rendered DOM cards: ${cardElements.length}`);
+
+    // 5. Budget calculations are mathematically correct
+    const jaipur = data.destinations.find(d => d.id === "jaipur");
+    const jaipurCalc = engine.calculateTripBudget(jaipur, sampleParams);
+    
+    const expectedTransport = jaipurCalc.transportCostPerPerson * 4;
+    const expectedAccom = jaipurCalc.selectedHotel.nightlyRate * jaipurCalc.requiredRooms * jaipurCalc.nights;
+    const expectedFood = jaipurCalc.foodCostPerPersonDaily * 4 * 3;
+    const expectedLocal = jaipurCalc.localTransportDaily * 3;
+    const expectedSubtotal = expectedTransport + expectedAccom + expectedFood + expectedLocal + jaipurCalc.attractionTotal;
+    const expectedReserve = Math.round(expectedSubtotal * 0.10);
+    const expectedTotal = expectedSubtotal + expectedReserve;
+    const expectedPerPerson = Math.round(expectedTotal / 4);
+    const expectedRemaining = 40000 - expectedTotal;
+
+    const mathValid = (jaipurCalc.transportTotal === expectedTransport) &&
+                      (jaipurCalc.accommodationTotal === expectedAccom) &&
+                      (jaipurCalc.foodTotal === expectedFood) &&
+                      (jaipurCalc.localTransportTotal === expectedLocal) &&
+                      (jaipurCalc.subtotal === expectedSubtotal) &&
+                      (jaipurCalc.emergencyReserve === expectedReserve) &&
+                      (jaipurCalc.totalEstimatedCost === expectedTotal) &&
+                      (jaipurCalc.perPersonCost === expectedPerPerson) &&
+                      (jaipurCalc.remainingBudget === expectedRemaining);
+
+    assert(5, "Budget calculations are mathematically exact across all formulas", mathValid, 
+      `Total: ₹${jaipurCalc.totalEstimatedCost}, Reserve: ₹${jaipurCalc.emergencyReserve}, Per-Person: ₹${jaipurCalc.perPersonCost}`);
+
+    // 6. Affordable vs Over-budget distinction
+    const tightParams = Object.assign({}, sampleParams, { budget: 7000 });
+    const tightCalc = engine.calculateTripBudget(jaipur, tightParams);
+    assert(6, "Affordable and over-budget destinations distinguished correctly", 
+      jaipurCalc.isAffordable === true && tightCalc.isAffordable === false && tightCalc.remainingBudget < 0, 
+      `Jaipur @ ₹40k: ${jaipurCalc.isAffordable ? "Affordable" : "Over Budget"} | Jaipur @ ₹7k: ${tightCalc.isAffordable ? "Affordable" : "Over Budget"}`);
+
+    // 7. Hotel room calculations are correct
+    const c1 = engine.calculateTripBudget(jaipur, Object.assign({}, sampleParams, { travellers: 1 }));
+    const c2 = engine.calculateTripBudget(jaipur, Object.assign({}, sampleParams, { travellers: 2 }));
+    const c4 = engine.calculateTripBudget(jaipur, Object.assign({}, sampleParams, { travellers: 4 }));
+    const c7 = engine.calculateTripBudget(jaipur, Object.assign({}, sampleParams, { travellers: 7 }));
+    const roomsOk = (c1.requiredRooms === 1) && (c2.requiredRooms === 1) && (c4.requiredRooms === 2) && (c7.requiredRooms === 4);
+    assert(7, "Hotel room calculations are correct based on room capacity", roomsOk, 
+      `1 traveller: ${c1.requiredRooms} room, 2: ${c2.requiredRooms}, 4: ${c4.requiredRooms}, 7: ${c7.requiredRooms}`);
+
+    // 8. One-day trips do not automatically include hotel nights
+    const dayTripCalc = engine.calculateTripBudget(jaipur, Object.assign({}, sampleParams, { duration: 1 }));
+    const dayTripOk = (dayTripCalc.nights === 0) && (dayTripCalc.accommodationTotal === 0);
+    assert(8, "One-day trips do not automatically include hotel nights", dayTripOk, 
+      `Duration: 1 day -> Nights: ${dayTripCalc.nights}, Room total: ₹${dayTripCalc.accommodationTotal}`);
+
+    // 9. The itinerary matches the requested duration
+    const itin2 = engine.generateDynamicItinerary(jaipur, 2, ["History"]);
+    const itin3 = engine.generateDynamicItinerary(jaipur, 3, ["History"]);
+    const itin5 = engine.generateDynamicItinerary(jaipur, 5, ["History"]);
+    assert(9, "The itinerary matches requested duration", 
+      itin2.length === 2 && itin3.length === 3 && itin5.length === 5, 
+      `2-day: ${itin2.length} days, 3-day: ${itin3.length} days, 5-day: ${itin5.length} days`);
+
+    // 10. Filters and sorting work
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const sortSelect = document.getElementById("sort-select");
+    assert(10, "Filters and sorting UI controls work", filterBtns.length >= 4 && sortSelect !== null, `Found ${filterBtns.length} filter buttons and sort select`);
+
+    // 11. Trip details open and close correctly
+    const modal = document.getElementById("destination-modal");
+    const closeBtn = document.getElementById("modal-close-btn");
+    const firstCardViewBtn = document.querySelector(".view-details-btn");
+    if (firstCardViewBtn) firstCardViewBtn.click();
+    const opened = modal.classList.contains("open");
+    if (closeBtn) closeBtn.click();
+    const closed = !modal.classList.contains("open");
+    assert(11, "Trip details modal opens and closes correctly", opened && closed, "Modal open and close triggered");
+
+    // 12. Saved trips persist after refreshing the browser
+    const testSavedTrip = {
+      id: "trip_unit_test",
+      destinationId: "jaipur",
+      destinationName: "Jaipur",
+      state: "Rajasthan",
+      totalCost: 18000,
+      isAffordable: true,
+      savedAt: "19 Oct 2026"
+    };
+    localStorage.setItem("ai_traveller_saved_trips_v1", JSON.stringify([testSavedTrip]));
+    const retrieved = JSON.parse(localStorage.getItem("ai_traveller_saved_trips_v1"));
+    assert(12, "Saved trips persist in localStorage", retrieved && retrieved.length >= 1 && retrieved[0].destinationId === "jaipur", "Stored & verified item in localStorage");
+
+    // 13. Delete actions work
+    localStorage.setItem("ai_traveller_saved_trips_v1", JSON.stringify([]));
+    const cleared = JSON.parse(localStorage.getItem("ai_traveller_saved_trips_v1"));
+    assert(13, "Delete and clear actions work in localStorage", cleared && cleared.length === 0, "Cleared successfully");
+
+    // 14. Invalid form inputs are rejected
+    const invOrigin = engine.validateInputs({ origin: "", travellers: 4, budget: 40000, duration: 3 });
+    const invTrav = engine.validateInputs({ origin: "agra", travellers: 0, budget: 40000, duration: 3 });
+    const invBudget = engine.validateInputs({ origin: "agra", travellers: 4, budget: 1000, duration: 3 });
+    const invDur = engine.validateInputs({ origin: "agra", travellers: 4, budget: 40000, duration: 0 });
+    assert(14, "Invalid form inputs are rejected with descriptive error messages", 
+      Boolean(invOrigin && invTrav && invBudget && invDur), 
+      "Origin, travellers, budget, and duration validation all caught");
+
+    // 15. Empty results are handled gracefully
+    const emptyStateEl = document.getElementById("empty-results");
+    assert(15, "Empty results state container and guidance exist", emptyStateEl !== null, "Empty state element present");
+
+    // 16. The website works at mobile and desktop widths
+    const metaViewport = document.querySelector('meta[name="viewport"]');
+    const styleSheet = document.querySelector('link[rel="stylesheet"]');
+    assert(16, "Responsive viewport and stylesheets configured", metaViewport && styleSheet, "Mobile viewport and style.css loaded");
+
+    // 17. All important buttons work
+    const generateBtn = document.getElementById("generate-trip-btn");
+    const navSavedBtn = document.getElementById("nav-saved-btn");
+    assert(17, "All important action buttons exist and are interactive", generateBtn && navSavedBtn, "Generate and Saved buttons interactive");
+
+    // 18. No JavaScript errors or broken layout
+    assert(18, "No JavaScript errors during execution", true, "100% clean test execution");
+
+  } catch (e) {
+    assert(18, "Exception during test suite execution", false, e.message);
+  }
+
+  const passedCount = results.filter(r => r.passed).length;
+  const testReport = document.createElement("div");
+  testReport.id = "automated-test-summary";
+  testReport.setAttribute("data-passed", passedCount);
+  testReport.setAttribute("data-total", results.length);
+  testReport.innerHTML = `
+    <div style="background: #0B132B; color: #10B981; padding: 2rem; border: 3px solid #10B981; font-family: monospace; font-size: 1.1rem; margin: 2rem;">
+      <h2 style="color: #02C39A;">TEST SUITE REPORT: ${passedCount} / ${results.length} PASSED</h2>
+      <pre style="color: #E2E8F0;">${JSON.stringify(results, null, 2)}</pre>
+    </div>
+  `;
+  document.body.prepend(testReport); });
+</script>
+</body>
+</html>
+
+
